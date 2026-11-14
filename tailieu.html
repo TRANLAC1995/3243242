@@ -1,0 +1,428 @@
+﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b78">
+<title>Kho tài liệu - Phòng Hồ Chí Minh</title>
+
+<style>
+:root {
+  --navy:#073b78;
+  --blue:#0755a5;
+  --gold:#e5bd54;
+  --bg:#eef3f9;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:#243247;
+  background:var(--bg);
+}
+header {
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:23px 15px;
+  border-bottom:4px solid var(--gold);
+}
+header h1 {margin:0;font-size:25px}
+header p {margin:8px 0 0;color:#dce8f7;font-size:14px}
+nav {
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:12px;
+  background:white;
+  box-shadow:0 2px 8px #00000010;
+}
+nav a {
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:bold;
+  font-size:13px;
+  padding:9px 15px;
+  border-radius:7px;
+}
+nav a:hover {background:#eaf1f9}
+.container {max-width:1100px;margin:25px auto;padding:0 15px}
+.intro {
+  background:linear-gradient(120deg,#073b78,#1266ad);
+  color:white;
+  padding:26px;
+  border-radius:16px;
+  box-shadow:0 5px 18px #073b7820;
+}
+.intro h2 {margin:0 0 10px;font-size:22px}
+.intro p {margin:0;line-height:1.6;color:#e5edf8}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:17px 0;
+}
+.stat {
+  background:white;
+  border-radius:12px;
+  padding:17px;
+  text-align:center;
+  box-shadow:0 3px 12px #00000008;
+}
+.stat strong {display:block;font-size:25px;color:var(--blue)}
+.stat span {font-size:13px;color:#66758a}
+.toolbar {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:18px 0;
+}
+.toolbar input,.toolbar select {
+  flex:1;
+  min-width:180px;
+  padding:12px;
+  border:1px solid #cbd5e1;
+  border-radius:9px;
+  background:white;
+  font-size:14px;
+}
+.categories {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:17px 0;
+}
+.categories button {
+  border:1px solid #cbd5e1;
+  background:white;
+  color:var(--navy);
+  border-radius:30px;
+  padding:9px 15px;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:13px;
+}
+.categories button.active,.categories button:hover {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+.section-title {
+  color:var(--navy);
+  margin:22px 0 13px;
+  font-size:19px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:15px;
+}
+.doc {
+  background:white;
+  padding:18px;
+  border-radius:13px;
+  box-shadow:0 3px 13px #0000000c;
+  border-left:4px solid var(--gold);
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.doc h3 {
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.45;
+  margin:0 0 9px;
+}
+.doc p {
+  color:#64748b;
+  font-size:13px;
+  line-height:1.6;
+  margin:0 0 13px;
+  flex:1;
+}
+.meta {
+  font-size:12px;
+  color:#718096;
+  margin-bottom:13px;
+}
+.tag {
+  display:inline-block;
+  background:#eaf1f9;
+  color:var(--blue);
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:10px;
+  width:max-content;
+}
+.actions {display:flex;gap:8px;flex-wrap:wrap}
+.actions a {
+  display:inline-block;
+  text-decoration:none;
+  padding:9px 13px;
+  border-radius:7px;
+  font-size:12px;
+  font-weight:bold;
+}
+.view {background:var(--blue);color:white}
+.download {background:#edf2f7;color:var(--navy)}
+.empty,.loading {
+  background:white;
+  padding:28px;
+  border-radius:12px;
+  text-align:center;
+  color:#64748b;
+  grid-column:1/-1;
+}
+footer {
+  text-align:center;
+  padding:22px 12px;
+  color:#64748b;
+  font-size:12px;
+  margin-top:35px;
+}
+@media(max-width:650px) {
+  header h1 {font-size:20px}
+  .grid {grid-template-columns:1fr}
+  .stats {gap:7px}
+  .stat {padding:12px 5px}
+  .stat strong {font-size:21px}
+  .stat span {font-size:11px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>KHO TÀI LIỆU PHÒNG HỒ CHÍ MINH</h1>
+  <p>Tra cứu, khai thác tài liệu phục vụ công tác giáo dục chính trị</p>
+</header>
+
+<nav>
+  <a href="index.html">TRANG CHỦ</a>
+  <a href="thuvien.html">THƯ VIỆN</a>
+  <a href="#" id="adminLink">QUẢN TRỊ</a>
+</nav>
+
+<main class="container">
+
+  <section class="intro">
+    <h2>KHO TÀI LIỆU ĐIỆN TỬ</h2>
+    <p>
+      Hệ thống lưu trữ và khai thác tài liệu tuyên truyền, giáo dục chính trị,
+      phổ biến kiến thức về quốc phòng, an ninh, biển đảo và các phong trào thi đua.
+      Cán bộ, chiến sĩ có thể tra cứu, xem trực tuyến và tải tài liệu PDF.
+    </p>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <strong id="totalDocs">0</strong>
+      <span>Tổng tài liệu</span>
+    </div>
+    <div class="stat">
+      <strong id="totalCats">5</strong>
+      <span>Nhóm tài liệu</span>
+    </div>
+    <div class="stat">
+      <strong id="shownDocs">0</strong>
+      <span>Đang hiển thị</span>
+    </div>
+  </section>
+
+  <h2 class="section-title">DANH MỤC TÀI LIỆU</h2>
+
+  <div class="categories" id="categories">
+    <button class="active" data-category="all">Tất cả tài liệu</button>
+    <button data-category="ngayle">Ngày lễ lớn</button>
+    <button data-category="biendao">Biển đảo</button>
+    <button data-category="quocphong">Quân sự, quốc phòng</button>
+    <button data-category="phongtrao">Phong trào thi đua</button>
+    <button data-category="khac">Tài liệu khác</button>
+  </div>
+
+  <div class="toolbar">
+    <input id="searchInput" type="search"
+      placeholder="Tìm kiếm tên hoặc nội dung tài liệu...">
+    <select id="sortSelect">
+      <option value="newest">Mới cập nhật trước</option>
+      <option value="oldest">Cũ nhất trước</option>
+      <option value="az">Tên A - Z</option>
+    </select>
+  </div>
+
+  <h2 class="section-title">DANH SÁCH TÀI LIỆU</h2>
+
+  <div class="grid" id="documentGrid">
+    <div class="loading">Đang kết nối kho dữ liệu...</div>
+  </div>
+
+</main>
+
+<footer>
+  PHÒNG HỒ CHÍ MINH · KHO TÀI LIỆU ĐIỆN TỬ
+</footer>
+
+<script>
+// THAY URL BÊN DƯỚI BẰNG URL ỨNG DỤNG WEB APPS SCRIPT
+const API_URL = "https://script.google.com/macros/s/AKfycbwbJBUa9cF1-PQMD9OxzPOmYsvP3lgxmvRexFK4mI8Dey92oU6lNvTJKbA8IIMrtYUULQ/exec";
+
+const categoryNames = {
+  ngayle:"Ngày lễ lớn, sự kiện chính trị",
+  biendao:"Biển đảo",
+  quocphong:"Quân sự, quốc phòng",
+  phongtrao:"Phong trào thi đua, cuộc vận động",
+  khac:"Tài liệu khác"
+};
+
+let allDocuments = [];
+let selectedCategory = "all";
+
+const grid = document.getElementById("documentGrid");
+
+document.getElementById("adminLink").addEventListener("click",function(e) {
+  e.preventDefault();
+  if (API_URL.startsWith("https://")) {
+    window.open(API_URL + "?action=admin","_blank");
+  } else {
+    alert("Bạn chưa cấu hình đường dẫn Apps Script.");
+  }
+});
+
+function loadDocuments() {
+  if (!API_URL.startsWith("https://")) {
+    grid.textContent = "Chưa cấu hình đường dẫn Google Apps Script.";
+    return;
+  }
+
+  const callbackName = "docsCallback_" + Date.now();
+  const script = document.createElement("script");
+  let finished = false;
+
+  window[callbackName] = function(result) {
+    finished = true;
+    allDocuments = result && result.success
+      ? (result.documents || []) : [];
+    delete window[callbackName];
+    script.remove();
+    renderDocuments();
+  };
+
+  script.onerror = function() {
+    delete window[callbackName];
+    script.remove();
+    grid.textContent = "Không thể kết nối kho dữ liệu. Vui lòng tải lại trang.";
+  };
+
+  script.src = API_URL +
+    "?action=list&callback=" + encodeURIComponent(callbackName);
+
+  document.body.appendChild(script);
+
+  setTimeout(function() {
+    if (!finished) {
+      delete window[callbackName];
+      script.remove();
+      grid.textContent = "Kết nối quá thời gian. Vui lòng thử lại.";
+    }
+  },15000);
+}
+
+function makeElement(tag,className,text) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (text !== undefined) el.textContent = text;
+  return el;
+}
+
+function renderDocuments() {
+  const keyword = document.getElementById("searchInput")
+    .value.trim().toLowerCase();
+  const sort = document.getElementById("sortSelect").value;
+
+  let filtered = allDocuments.filter(doc => {
+    const matchesCategory = selectedCategory === "all" ||
+      doc.category === selectedCategory;
+    const content = (doc.title + " " + doc.description).toLowerCase();
+    return matchesCategory && content.includes(keyword);
+  });
+
+  if (sort === "az") {
+    filtered.sort((a,b) => a.title.localeCompare(b.title,"vi"));
+  } else {
+    filtered.sort((a,b) => {
+      const dateA = new Date(a.date || 0).getTime() || 0;
+      const dateB = new Date(b.date || 0).getTime() || 0;
+      return sort === "oldest" ? dateA-dateB : dateB-dateA;
+    });
+  }
+
+  document.getElementById("totalDocs").textContent = allDocuments.length;
+  document.getElementById("shownDocs").textContent = filtered.length;
+
+  grid.replaceChildren();
+
+  if (!filtered.length) {
+    grid.appendChild(makeElement("div","empty","Không tìm thấy tài liệu phù hợp."));
+    return;
+  }
+
+  filtered.forEach(doc => {
+    const card = makeElement("article","doc");
+    card.appendChild(makeElement("span","tag",
+      categoryNames[doc.category] || "Tài liệu"));
+
+    card.appendChild(makeElement("h3","",doc.title));
+    card.appendChild(makeElement("p","",
+      doc.description || "Tài liệu phục vụ công tác tuyên truyền, giáo dục."));
+
+    const dateText = doc.date
+      ? "Ngày tài liệu: " + doc.date
+      : "Tài liệu lưu trữ";
+    card.appendChild(makeElement("div","meta",dateText));
+
+    const actions = makeElement("div","actions");
+    const view = makeElement("a","view","XEM TÀI LIỆU");
+    view.href = doc.viewUrl;
+    view.target = "_blank";
+    view.rel = "noopener";
+
+    const download = makeElement("a","download","TẢI PDF");
+    download.href = doc.downloadUrl;
+    download.target = "_blank";
+    download.rel = "noopener";
+
+    actions.append(view,download);
+    card.appendChild(actions);
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById("categories").addEventListener("click",function(e) {
+  const button = e.target.closest("button[data-category]");
+  if (!button) return;
+
+  selectedCategory = button.dataset.category;
+
+  document.querySelectorAll("#categories button").forEach(btn => {
+    btn.classList.toggle("active",btn === button);
+  });
+
+  renderDocuments();
+});
+
+document.getElementById("searchInput")
+  .addEventListener("input",renderDocuments);
+
+document.getElementById("sortSelect")
+  .addEventListener("change",renderDocuments);
+
+loadDocuments();
+</script>
+
+</body>
+</html>

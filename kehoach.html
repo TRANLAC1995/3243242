@@ -1,0 +1,1234 @@
+﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b78">
+<title>Kế hoạch công tác - Phòng Hồ Chí Minh</title>
+
+<style>
+:root {
+  --navy:#073b78;
+  --blue:#0755a5;
+  --light:#eaf2fc;
+  --gold:#e5bd54;
+  --text:#26364a;
+  --muted:#718096;
+  --white:#fff;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#f1f5fb;
+}
+
+/* HEADER */
+header {
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(125deg,#052b59,#0755a5,#0876b8);
+  color:white;
+  text-align:center;
+  padding:38px 15px 42px;
+  border-bottom:5px solid var(--gold);
+}
+
+header:before,
+header:after {
+  content:"";
+  position:absolute;
+  border:2px solid #ffffff16;
+  border-radius:50%;
+}
+
+header:before {
+  width:250px;
+  height:250px;
+  top:-140px;
+  left:-60px;
+}
+
+header:after {
+  width:320px;
+  height:320px;
+  bottom:-240px;
+  right:-70px;
+}
+
+.header-content {
+  position:relative;
+  z-index:1;
+}
+
+.logo-circle {
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  margin:0 auto 14px;
+  background:linear-gradient(145deg,#f9e5a1,#d5a936);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:35px;
+  color:#073b78;
+  border:4px solid #ffffff80;
+  box-shadow:0 5px 18px #00000035;
+}
+
+header h1 {
+  margin:0;
+  font-size:27px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+header p {
+  margin:10px 0 0;
+  color:#e1edff;
+  font-size:14px;
+  letter-spacing:2px;
+  font-weight:bold;
+}
+
+/* NAVIGATION */
+nav {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:13px 10px;
+  background:white;
+  box-shadow:0 3px 12px #0000000b;
+  position:relative;
+  z-index:2;
+}
+
+nav a {
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:bold;
+  font-size:12px;
+  padding:11px 17px;
+  border-radius:25px;
+  transition:.25s;
+}
+
+nav a:hover {
+  background:var(--navy);
+  color:white;
+}
+
+nav a.admin {
+  background:#fff5d8;
+  color:#916b13;
+  border:1px solid #f0d68a;
+}
+
+/* MAIN */
+.container {
+  max-width:1150px;
+  margin:27px auto;
+  padding:0 17px;
+}
+
+/* HERO */
+.intro {
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  background:linear-gradient(120deg,#073b78,#0755a5);
+  color:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 24px #073b7825;
+}
+
+.intro-content {
+  position:relative;
+  z-index:1;
+}
+
+.intro h2 {
+  margin:0 0 12px;
+  font-size:23px;
+  letter-spacing:.4px;
+}
+
+.intro p {
+  margin:0;
+  line-height:1.75;
+  color:#e3edfa;
+  font-size:14px;
+  max-width:720px;
+}
+
+.intro-icon {
+  flex-shrink:0;
+  width:105px;
+  height:105px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#ffffff18;
+  border:2px solid #ffffff55;
+  font-size:49px;
+  box-shadow:inset 0 0 20px #ffffff12;
+}
+
+.intro:after {
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  border:35px solid #ffffff0b;
+  right:70px;
+  top:-150px;
+}
+
+/* STATISTICS */
+.stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:20px 0 30px;
+}
+
+.stat {
+  background:white;
+  border-radius:17px;
+  padding:19px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 4px 15px #00000009;
+  border:1px solid #e7edf5;
+}
+
+.stat-icon {
+  width:54px;
+  height:54px;
+  flex-shrink:0;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+}
+
+.stat:nth-child(1) .stat-icon {
+  background:#e4efff;
+  color:#0755a5;
+}
+
+.stat:nth-child(2) .stat-icon {
+  background:#fff3d4;
+  color:#b18113;
+}
+
+.stat:nth-child(3) .stat-icon {
+  background:#e0f6eb;
+  color:#168653;
+}
+
+.stat strong {
+  display:block;
+  font-size:27px;
+  color:var(--navy);
+  margin-bottom:4px;
+}
+
+.stat span {
+  font-size:12px;
+  color:#718096;
+}
+
+/* SECTION TITLE */
+.section-heading {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  margin:30px 0 16px;
+}
+
+.heading-icon {
+  width:39px;
+  height:39px;
+  border-radius:50%;
+  background:#e1ecfa;
+  color:var(--navy);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:19px;
+  flex-shrink:0;
+}
+
+.section-heading h2 {
+  color:var(--navy);
+  font-size:18px;
+  margin:0;
+  font-weight:800;
+}
+
+.section-heading p {
+  margin:4px 0 0;
+  font-size:12px;
+  color:#8290a3;
+}
+
+/* CATEGORY CIRCLES - SƠ ĐỒ VÒNG TRÒN */
+.categories {
+  position:relative;
+  width:100%;
+  max-width:680px;
+  height:540px;
+  margin:20px auto 35px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle,#ffffff 0%,#edf5ff 65%,#e1edfb 100%);
+  border-radius:30px;
+}
+
+/* VÒNG TRÒN TRANG TRÍ */
+.categories::before {
+  content:"";
+  position:absolute;
+  width:390px;
+  height:390px;
+  border:2px dashed rgba(7,59,120,.22);
+  border-radius:50%;
+}
+
+.categories::after {
+  content:"";
+  position:absolute;
+  width:285px;
+  height:285px;
+  border:1px solid rgba(229,189,84,.5);
+  border-radius:50%;
+}
+
+/* VÒNG TRÒN TRUNG TÂM */
+.category-center {
+  position:absolute;
+  z-index:2;
+  width:185px;
+  height:185px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#073b78,#0755a5);
+  border:6px solid #e5bd54;
+  box-shadow:0 8px 25px rgba(7,59,120,.3);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:15px;
+}
+
+.center-icon {
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+.category-center strong {
+  font-size:14px;
+  line-height:1.4;
+  letter-spacing:.5px;
+}
+
+.category-center span {
+  font-size:10px;
+  margin-top:6px;
+  color:#f6d77e;
+  font-weight:bold;
+}
+
+/* CÁC DANH MỤC XUNG QUANH */
+.category {
+  position:absolute;
+  z-index:3;
+  width:125px;
+  height:125px;
+  border:1px solid #e5ebf3;
+  border-radius:50%;
+  background:white;
+  box-shadow:0 5px 18px rgba(0,40,90,.15);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  cursor:pointer;
+  transition:all .25s ease;
+  padding:10px;
+  text-align:center;
+  transform:translate(-50%,-50%);
+  color:var(--text);
+}
+
+.category:hover {
+  box-shadow:0 9px 25px rgba(7,59,120,.25);
+  background:#f4f8ff;
+  scale:1.06;
+}
+
+.category.active {
+  background:#fff8e5;
+  border:3px solid #e5bd54;
+  box-shadow:0 7px 22px rgba(229,189,84,.35);
+}
+
+.category-circle {
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0;
+  font-size:27px;
+}
+
+.category-name {
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color:#073b78;
+  text-align:center;
+  line-height:1.3;
+}
+
+/* VỊ TRÍ 6 DANH MỤC */
+.category[data-category="all"] {
+  top:9%;
+  left:50%;
+}
+
+.category[data-category="congtac"] {
+  top:28%;
+  left:82%;
+}
+
+.category[data-category="giaoduc"] {
+  top:73%;
+  left:82%;
+}
+
+.category[data-category="hoatdong"] {
+  top:91%;
+  left:50%;
+}
+
+.category[data-category="huanluyen"] {
+  top:73%;
+  left:18%;
+}
+
+.category[data-category="khac"] {
+  top:28%;
+  left:18%;
+}
+
+/* MÀU BIỂU TƯỢNG */
+.category[data-category="all"] .category-circle {
+  background:#e3efff;
+}
+
+.category[data-category="congtac"] .category-circle {
+  background:#e4f4ff;
+}
+
+.category[data-category="giaoduc"] .category-circle {
+  background:#f0eaff;
+}
+
+.category[data-category="hoatdong"] .category-circle {
+  background:#fff2dc;
+}
+
+.category[data-category="huanluyen"] .category-circle {
+  background:#e4f5e9;
+}
+
+.category[data-category="khac"] .category-circle {
+  background:#f0f0f0;
+}
+
+/* TOOLBAR */
+.toolbar {
+  display:flex;
+  gap:11px;
+  flex-wrap:wrap;
+  margin:18px 0 24px;
+}
+
+.search-box {
+  flex:1;
+  min-width:220px;
+  position:relative;
+}
+
+.search-box span {
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:17px;
+}
+
+.toolbar input,
+.toolbar select {
+  width:100%;
+  padding:14px 14px 14px 42px;
+  border:1px solid #dce4ef;
+  border-radius:12px;
+  background:white;
+  font-size:13px;
+  outline:none;
+  color:var(--text);
+}
+
+.toolbar select {
+  width:auto;
+  min-width:205px;
+  padding-left:14px;
+  cursor:pointer;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+  border-color:#4784c5;
+  box-shadow:0 0 0 3px #0755a510;
+}
+
+/* PLAN LIST */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:17px;
+}
+
+.plan {
+  position:relative;
+  overflow:hidden;
+  background:white;
+  padding:20px;
+  border-radius:17px;
+  border:1px solid #e7edf5;
+  box-shadow:0 4px 14px #00000009;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  transition:.25s;
+}
+
+.plan:hover {
+  transform:translateY(-3px);
+  box-shadow:0 9px 23px #073b7815;
+  border-color:#c5d6ec;
+}
+
+.plan:before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:5px;
+  height:100%;
+  background:var(--gold);
+}
+
+.plan-top {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:13px;
+}
+
+.plan-icon {
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e8f0fc;
+  font-size:22px;
+}
+
+.plan h3 {
+  color:var(--navy);
+  font-size:15px;
+  line-height:1.5;
+  margin:0;
+  overflow-wrap:anywhere;
+}
+
+.tag {
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+  background:#edf3fc;
+  color:#0755a5;
+  padding:6px 11px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.plan p {
+  color:#64748b;
+  font-size:13px;
+  line-height:1.7;
+  margin:0 0 14px;
+  flex:1;
+  white-space:pre-line;
+  overflow-wrap:anywhere;
+}
+
+.meta {
+  border-top:1px solid #edf0f5;
+  padding-top:12px;
+  font-size:11px;
+  color:#8290a3;
+  margin-bottom:14px;
+}
+
+.actions {
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+}
+
+.actions a {
+  flex:1;
+  text-align:center;
+  text-decoration:none;
+  padding:11px 12px;
+  border-radius:9px;
+  font-size:11px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.view {
+  background:var(--navy);
+  color:white;
+}
+
+.view:hover {
+  background:#0b5ba8;
+}
+
+.download {
+  background:#fff4d8;
+  color:#8a6819;
+}
+
+.download:hover {
+  background:#f9e7b6;
+}
+
+/* EMPTY / LOADING */
+.empty,
+.loading {
+  background:white;
+  padding:38px 20px;
+  border-radius:16px;
+  text-align:center;
+  color:#718096;
+  grid-column:1/-1;
+  border:1px dashed #cbd7e6;
+  line-height:1.7;
+}
+
+.empty-icon {
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer {
+  margin-top:45px;
+  padding:27px 15px;
+  background:#052d5b;
+  color:#dbe7f5;
+  text-align:center;
+  border-top:4px solid var(--gold);
+}
+
+.footer-icon {
+  width:43px;
+  height:43px;
+  margin:0 auto 10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  background:#ffffff18;
+  font-size:21px;
+}
+
+footer strong {
+  display:block;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+footer p {
+  font-size:11px;
+  color:#b9cce2;
+  margin:8px 0 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:800px) {
+  .stats {
+    gap:10px;
+  }
+}
+
+/* RESPONSIVE - ĐIỆN THOẠI */
+@media(max-width:600px) {
+  header {
+    padding:28px 12px 32px;
+  }
+
+  header h1 {
+    font-size:20px;
+  }
+
+  header p {
+    font-size:11px;
+  }
+
+  .logo-circle {
+    width:65px;
+    height:65px;
+    font-size:30px;
+  }
+
+  nav {
+    gap:4px;
+  }
+
+  nav a {
+    font-size:10px;
+    padding:9px 11px;
+  }
+
+  .container {
+    margin:18px auto;
+    padding:0 12px;
+  }
+
+  .intro {
+    padding:22px 18px;
+    border-radius:16px;
+  }
+
+  .intro h2 {
+    font-size:18px;
+  }
+
+  .intro p {
+    font-size:12px;
+  }
+
+  .intro-icon {
+    width:65px;
+    height:65px;
+    font-size:30px;
+  }
+
+  .stats {
+    gap:8px;
+  }
+
+  .stat {
+    padding:12px 8px;
+    flex-direction:column;
+    text-align:center;
+    gap:7px;
+  }
+
+  .stat-icon {
+    width:42px;
+    height:42px;
+    font-size:20px;
+  }
+
+  .stat strong {
+    font-size:21px;
+  }
+
+  .stat span {
+    font-size:10px;
+  }
+
+  /* DANH MỤC TRÊN ĐIỆN THOẠI */
+  .categories {
+    height:auto;
+    max-width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+    padding:20px 10px;
+    background:transparent;
+  }
+
+  .categories::before,
+  .categories::after {
+    display:none;
+  }
+
+  .category-center {
+    position:relative;
+    grid-column:1/-1;
+    width:145px;
+    height:145px;
+    margin:0 auto 10px;
+  }
+
+  .center-icon {
+    font-size:30px;
+  }
+
+  .category {
+    position:relative;
+    top:auto !important;
+    left:auto !important;
+    transform:none !important;
+    width:100%;
+    height:125px;
+    border-radius:18px;
+  }
+
+  .category:hover {
+    transform:translateY(-3px) !important;
+  }
+
+  .category-circle {
+    width:48px;
+    height:48px;
+  }
+
+  .category-name {
+    font-size:11px;
+  }
+
+  .section-heading h2 {
+    font-size:15px;
+  }
+
+  .toolbar {
+    gap:8px;
+  }
+
+  .search-box,
+  .toolbar select {
+    width:100%;
+    min-width:100%;
+  }
+
+  .grid {
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .plan {
+    padding:17px;
+  }
+
+  .plan h3 {
+    font-size:14px;
+  }
+
+  footer {
+    margin-top:30px;
+  }
+}
+
+@media(max-width:370px) {
+  .intro-icon {
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="logo-circle">📋</div>
+    <h1>KẾ HOẠCH CÔNG TÁC</h1>
+    <p>PHÒNG HỒ CHÍ MINH</p>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">⌂ TRANG CHỦ</a>
+  <a href="thuvien.html">▤ THƯ VIỆN</a>
+  <a href="tailieu.html">▣ KHO TÀI LIỆU</a>
+  <a href="#" class="admin" id="adminLink">⚙ QUẢN TRỊ</a>
+</nav>
+
+<main class="container">
+
+  <section class="intro">
+    <div class="intro-content">
+      <h2>HỆ THỐNG QUẢN LÝ KẾ HOẠCH</h2>
+      <p>
+        Lưu trữ, quản lý, tra cứu và khai thác các kế hoạch công tác,
+        giáo dục chính trị, tuyên truyền, huấn luyện, học tập và tổ chức
+        các hoạt động của đơn vị. Góp phần nâng cao hiệu quả quản lý,
+        điều hành và tổ chức thực hiện nhiệm vụ.
+      </p>
+    </div>
+    <div class="intro-icon">📚</div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <div class="stat-icon">📁</div>
+      <div>
+        <strong id="totalPlans">0</strong>
+        <span>Tổng số kế hoạch</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-icon">📂</div>
+      <div>
+        <strong>05</strong>
+        <span>Nhóm kế hoạch</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-icon">🔎</div>
+      <div>
+        <strong id="shownPlans">0</strong>
+        <span>Đang hiển thị</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-heading">
+    <div class="heading-icon">▦</div>
+    <div>
+      <h2>DANH MỤC KẾ HOẠCH</h2>
+      <p>Lựa chọn nhóm nội dung để tra cứu</p>
+    </div>
+  </div>
+
+  <!-- SƠ ĐỒ DANH MỤC VÒNG TRÒN -->
+  <div class="categories" id="categories">
+
+    <!-- VÒNG TRÒN TRUNG TÂM -->
+    <div class="category-center">
+      <div class="center-icon">⚓</div>
+      <strong>PHÒNG HỒ CHÍ MINH</strong>
+      <span>QUẢN LÝ KẾ HOẠCH</span>
+    </div>
+
+    <!-- CÁC DANH MỤC XUNG QUANH -->
+    <button class="category active" data-category="all" type="button">
+      <span class="category-circle">📚</span>
+      <span class="category-name">Tất cả kế hoạch</span>
+    </button>
+
+    <button class="category" data-category="congtac" type="button">
+      <span class="category-circle">📅</span>
+      <span class="category-name">Công tác tháng, tuần</span>
+    </button>
+
+    <button class="category" data-category="giaoduc" type="button">
+      <span class="category-circle">🎓</span>
+      <span class="category-name">Giáo dục chính trị</span>
+    </button>
+
+    <button class="category" data-category="hoatdong" type="button">
+      <span class="category-circle">🏅</span>
+      <span class="category-name">Hoạt động, phong trào</span>
+    </button>
+
+    <button class="category" data-category="huanluyen" type="button">
+      <span class="category-circle">🎯</span>
+      <span class="category-name">Huấn luyện, học tập</span>
+    </button>
+
+    <button class="category" data-category="khac" type="button">
+      <span class="category-circle">📑</span>
+      <span class="category-name">Kế hoạch khác</span>
+    </button>
+
+  </div>
+
+  <div class="section-heading">
+    <div class="heading-icon">🔍</div>
+    <div>
+      <h2>TRA CỨU KẾ HOẠCH</h2>
+      <p>Tìm kiếm theo tên hoặc nội dung kế hoạch</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="search-box">
+      <span>🔎</span>
+      <input id="searchInput" type="search"
+        placeholder="Nhập tên hoặc nội dung kế hoạch...">
+    </div>
+
+    <select id="sortSelect">
+      <option value="newest">Mới cập nhật trước</option>
+      <option value="oldest">Cũ nhất trước</option>
+      <option value="az">Tên A - Z</option>
+    </select>
+  </div>
+
+  <div class="section-heading">
+    <div class="heading-icon">📋</div>
+    <div>
+      <h2>DANH SÁCH KẾ HOẠCH</h2>
+      <p>Các kế hoạch được cập nhật trên hệ thống</p>
+    </div>
+  </div>
+
+  <div class="grid" id="planGrid">
+    <div class="loading">⏳ Đang kết nối dữ liệu...</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-icon">⚓</div>
+  <strong>PHÒNG HỒ CHÍ MINH</strong>
+  <p>HỆ THỐNG QUẢN LÝ KẾ HOẠCH CÔNG TÁC</p>
+</footer>
+
+<script>
+// URL ỨNG DỤNG WEB APPS SCRIPT
+const API_URL ="https://script.google.com/macros/s/AKfycbw7dSRsmzmhViwqzVEUZMVlORvxjuiqIvMlUsng-EMn550Emvuu4J-_lY6nQ87lCXUOog/exec";
+
+const categoryNames = {
+  congtac:"Kế hoạch công tác tháng, tuần",
+  giaoduc:"Kế hoạch giáo dục chính trị",
+  hoatdong:"Kế hoạch hoạt động, phong trào",
+  huanluyen:"Kế hoạch huấn luyện, học tập",
+  khac:"Kế hoạch khác"
+};
+
+const categoryIcons = {
+  congtac:"📅",
+  giaoduc:"🎓",
+  hoatdong:"🏅",
+  huanluyen:"🎯",
+  khac:"📑"
+};
+
+let allPlans = [];
+let selectedCategory = "all";
+
+const grid = document.getElementById("planGrid");
+
+// MỞ TRANG QUẢN TRỊ
+document.getElementById("adminLink").addEventListener("click",function(e) {
+  e.preventDefault();
+
+  if (API_URL.startsWith("https://")) {
+    window.open(API_URL + "?action=kehoach-admin","_blank");
+  } else {
+    alert("Bạn chưa cấu hình URL Apps Script.");
+  }
+});
+
+// TẢI DỮ LIỆU
+function loadPlans() {
+  if (!API_URL.startsWith("https://")) {
+    grid.textContent = "Chưa cấu hình đường dẫn Google Apps Script.";
+    return;
+  }
+
+  const callbackName = "plansCallback_" + Date.now();
+  const script = document.createElement("script");
+  let finished = false;
+
+  window[callbackName] = function(result) {
+    finished = true;
+
+    allPlans = result && result.success
+      ? (result.plans || []) : [];
+
+    delete window[callbackName];
+    script.remove();
+    renderPlans();
+  };
+
+  script.onerror = function() {
+    delete window[callbackName];
+    script.remove();
+    grid.textContent = "Không thể kết nối dữ liệu. Vui lòng tải lại trang.";
+  };
+
+  script.src = API_URL +
+    "?action=kehoach-list&callback=" + encodeURIComponent(callbackName);
+
+  document.body.appendChild(script);
+
+  setTimeout(function() {
+    if (!finished) {
+      delete window[callbackName];
+      script.remove();
+      grid.textContent = "Kết nối quá thời gian. Vui lòng thử lại.";
+    }
+  },15000);
+}
+
+// TẠO PHẦN TỬ AN TOÀN
+function el(tag,className,text) {
+  const node = document.createElement(tag);
+
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+
+  return node;
+}
+
+// HIỂN THỊ KẾ HOẠCH
+function renderPlans() {
+  const keyword = document.getElementById("searchInput")
+    .value.trim().toLowerCase();
+
+  const sort = document.getElementById("sortSelect").value;
+
+  let filtered = allPlans.filter(plan => {
+    const categoryMatch = selectedCategory === "all" ||
+      plan.category === selectedCategory;
+
+    const content = (
+      (plan.title || "") + " " +
+      (plan.description || "")
+    ).toLowerCase();
+
+    return categoryMatch && content.includes(keyword);
+  });
+
+  if (sort === "az") {
+    filtered.sort((a,b) =>
+      (a.title || "").localeCompare(b.title || "", "vi")
+    );
+  } else {
+    filtered.sort((a,b) => {
+      const da = new Date(a.date || 0).getTime() || 0;
+      const db = new Date(b.date || 0).getTime() || 0;
+
+      return sort === "oldest" ? da-db : db-da;
+    });
+  }
+
+  document.getElementById("totalPlans").textContent = allPlans.length;
+  document.getElementById("shownPlans").textContent = filtered.length;
+
+  grid.replaceChildren();
+
+  if (!filtered.length) {
+    const empty = el("div","empty");
+    empty.appendChild(el("div","empty-icon","📂"));
+    empty.appendChild(el("strong","","Chưa có kế hoạch phù hợp."));
+    empty.appendChild(el("div","","Bạn có thể chọn danh mục khác hoặc thay đổi từ khóa tìm kiếm."));
+    grid.appendChild(empty);
+    return;
+  }
+
+  filtered.forEach(plan => {
+    const card = el("article","plan");
+
+    const top = el("div","plan-top");
+    const icon = el("div","plan-icon",
+      categoryIcons[plan.category] || "📋"
+    );
+
+    const title = el("h3","",plan.title || "Kế hoạch chưa có tên");
+
+    top.append(icon,title);
+    card.appendChild(top);
+
+    card.appendChild(el("span","tag",
+      categoryNames[plan.category] || "Kế hoạch khác"
+    ));
+
+    card.appendChild(el("p","",
+      plan.description || "Kế hoạch công tác của đơn vị."
+    ));
+
+    card.appendChild(el("div","meta",
+      plan.date ? "📅 Ngày kế hoạch: " + plan.date : "📁 Kế hoạch lưu trữ"
+    ));
+
+    const actions = el("div","actions");
+
+    const view = el("a","view","◉  XEM KẾ HOẠCH");
+    view.href = plan.viewUrl || "#";
+    view.target = "_blank";
+    view.rel = "noopener";
+
+    const download = el("a","download","↓  TẢI VỀ");
+    download.href = plan.downloadUrl || "#";
+    download.target = "_blank";
+    download.rel = "noopener";
+
+    actions.append(view,download);
+    card.appendChild(actions);
+
+    grid.appendChild(card);
+  });
+}
+
+// LỌC DANH MỤC
+document.getElementById("categories").addEventListener("click",function(e) {
+  const button = e.target.closest("button[data-category]");
+  if (!button) return;
+
+  selectedCategory = button.dataset.category;
+
+  document.querySelectorAll("#categories button").forEach(btn => {
+    btn.classList.toggle("active",btn === button);
+  });
+
+  renderPlans();
+});
+
+// TÌM KIẾM
+document.getElementById("searchInput")
+  .addEventListener("input",renderPlans);
+
+// SẮP XẾP
+document.getElementById("sortSelect")
+  .addEventListener("change",renderPlans);
+
+// KHỞI ĐỘNG
+loadPlans();
+</script>
+
+</body>
+</html>
